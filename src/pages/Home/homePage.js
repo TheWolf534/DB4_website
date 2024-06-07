@@ -20,22 +20,22 @@ const mainPage = () => {
     const progressCircleSize = 700;
     return (
       <Flex gap={gapSize !== 'customize' ? gapSize : customGapSize}>
-      <div>
+    <div class="Widget" id="TempWidget">
         <Progress size={progressCircleSize} format={(percent) => percent + "°"} type="dashboard" percent={30} strokeColor={twoColors} />
-        <p className="title">Current Temperatur</p>
-      </div>
-      <div>
+        <p class="widgetTitle">Current Temperatur</p>
+    </div>
+    <div class="Widget" id="AlgeConcentrationWidget">
         <Progress size={progressCircleSize} format={(percent) => percent + "mol/dm3"} type="dashboard" percent={30} strokeColor={twoColors} />
-        <p className="title">Alge concentration</p>
-      </div>
-      <div>
+        <p class="widgetTitle">Alge concentration</p>
+    </div>
+    <div class="Widget" id="PowerWidget">
         <Progress size={progressCircleSize} format={(percent) => percent + "W"} type="dashboard" percent={30} strokeColor={twoColors} />
-        <p className="title">Power</p>
-      </div>
-      <div>
+        <p class="widgetTitle">Power</p>
+    </div>
+    <div class="Widget" id="PumpSpeedWidget">
         <Progress size={progressCircleSize} format={(percent) => percent + "RPM"} type="dashboard" percent={30} strokeColor={twoColors} />
-        <p className="title">Pump Speed</p>
-      </div>
+        <p class="widgetTitle">Pump Speed</p>
+    </div>
     </Flex>
     )
 };
