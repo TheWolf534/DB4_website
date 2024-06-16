@@ -1,0 +1,144 @@
+.container {
+    background:linear-gradient(90deg, #7FB7BC 0%, #b6d4d7 40%, #80B8BC 80%, #80B8BC 100%);
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    justify-content: center;
+     /* Full viewport height */;
+    min-height: 100vh;
+    min-width: 100dvh;
+
+}
+
+
+  
+.periodContainer { 
+    position: relative;
+    display:flex; 
+    max-width: fit-content;
+    flex-direction: row;
+    margin-top: 50px;
+    border-radius: 50px;
+    margin-left: 50px;
+    align-self: center;
+    align-items: baseline;
+    border: 1px solid #000000;
+    
+    
+    
+}
+.screenContainer { 
+    position: relative;
+    display:flex; 
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 50px;
+    border-radius: 50px;
+    margin-left: 50px;
+    align-self: center;
+    width: auto;
+    
+}
+.overviewContainer { 
+    position: relative;
+    display:flex; 
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 50px;
+    border-radius: 50px;
+    margin-left: 50px;
+    align-self: center;
+    width: auto;
+    padding: 20px;
+}
+.period,selected-period,hover-period{
+    padding-left: 20px;
+    padding-right: 20px;
+    height:40;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0); /* Transparent white background */
+    border: none; /* Add border styles if necessary */
+    border-radius: 50px;
+
+
+}
+.hover-period{
+    background-color: #7FB7BC, 0.5;
+
+}
+.period-overview{
+    padding-left: 20px;
+    padding-right: 20px;
+    height:40;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+.selected-period{
+    background-color: #7FB7BC;
+    border-radius: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height:40;
+    justify-content: center;
+    align-items: center;
+    
+}
+.button {
+    display: flex; /* To center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 62px; /* Width of the button */
+    height: 62px; /* Height of the button */
+    border-radius: 41px; /* Half of width/height to make it circular */
+    border: 1px solid black; /* Border color and thickness */
+    background-color: transparent; /* Transparent background */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline from text */
+    margin: 4px 2px; /* Margin around the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 0; /* Remove padding to ensure circle shape */
+  }
+  .button p {
+    margin: 0; /* Remove default margin from p element */
+  }
+
+/* Styles for the left screen */
+
+.leftscreen {
+    justify-content: center;
+    align-items: center;
+    border-radius:20px;
+    background-color: #7FB7BC, 0;
+    border: 1px solid #000000;
+    margin: 20px;
+    margin-right: 20px;
+    height:334px;
+    
+    
+    /* Optional blur effect */
+}
+.rightscreen {
+    justify-content: center;
+    align-items: center;
+    height:334px;
+    border-radius:20px;
+    background-color: rgba(53, 103, 107, 0.1);
+    padding:20px;
+    margin: 20px;
+    /* Optional blur effect */
+}
+.vertical-line{
+    border-left: 1.5px solid #000000;
+    height: 60%;
+    margin-top: 80px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+/* Styles for the right data section */

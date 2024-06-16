@@ -1,0 +1,23 @@
+/* transitionStyles.css */
+.ease-enter {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  
+  .ease-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 500ms ease-out, transform 500ms ease-out;
+  }
+  
+  .ease-exit {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .ease-exit-active {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 500ms ease-out, transform 500ms ease-out;
+  }
+  
