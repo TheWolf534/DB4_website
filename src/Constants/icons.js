@@ -1,4 +1,4 @@
-import arrowLeft from '../assets/icons/arrow-left.svg';
+import arrowLeft from '../assets/icons/arrowleft.png';
 
 export default { 
     arrowLeft,

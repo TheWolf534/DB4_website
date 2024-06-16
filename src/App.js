@@ -1,23 +1,16 @@
+// App.js
 import React from 'react';
-import Home from './pages/Home/homePage.js';
-import Concentration from './pages/Concentration/concentrationPage.js';
-import Temperature from './pages/Temperature/lightIntensityPage.js';
-import LightIntensity from './pages/LightIntensity/lightIntensityPage.js';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from 'react-router-dom';
+import AnimatedRoutes from './pages/AnimatedRoutes';
 
-
-const value = 0.66;
 const App = () => {
-  return(
+  return (
     <div>
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
+        <AnimatedRoutes />
       </BrowserRouter>
     </div>
-  )
+  );
 };
-
 
 export default App;
