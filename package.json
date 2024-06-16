@@ -4,7 +4,11 @@
   "private": true,
   "dependencies": {
     "@alptugidin/react-circular-progress-bar": "^1.1.2",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "@fseehawer/react-circular-slider": "^2.6.4",
+    "@mui/icons-material": "^5.15.19",
+    "@mui/material": "^5.15.19",
     "@nextui-org/progress": "^2.0.30",
     "@nextui-org/react": "^2.4.1",
     "@nextui-org/system": "^2.2.1",
@@ -13,6 +17,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "antd": "^5.18.0",
+    "axios": "^1.7.2",
     "framer-motion": "^11.2.10",
     "react": "^18.3.1",
     "react-circular-progressbar": "^2.1.0",
@@ -20,6 +25,7 @@
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
     "react-transition-group": "^4.4.5",
+    "sass": "^1.77.4",
     "tailwindcss": "^3.4.4",
     "web-vitals": "^2.1.4"
   },
