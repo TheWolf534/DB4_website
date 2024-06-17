@@ -13,7 +13,7 @@
 
   
 .periodContainer { 
-    position: relative;
+    position: sticky;
     display:flex; 
     max-width: fit-content;
     flex-direction: row;
@@ -21,7 +21,6 @@
     border-radius: 50px;
     margin-left: 50px;
     align-self: center;
-    align-items: baseline;
     border: 1px solid #000000;
     
     
@@ -124,7 +123,7 @@
 .rightscreen {
     justify-content: center;
     align-items: center;
-    height:334px;
+    max-height:500px;
     border-radius:20px;
     background-color: rgba(53, 103, 107, 0.1);
     padding:20px;

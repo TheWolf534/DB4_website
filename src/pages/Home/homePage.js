@@ -1,6 +1,5 @@
 import React from 'react';
 import { Flex, Progress } from 'antd';
-import './homePageStyle.css';
 import {COLORS, FONT} from '../../Constants/theme.js';
 import '../../styles/sensorPage.css';
 import {useNavigate} from "react-router-dom";
@@ -21,6 +20,7 @@ const CustomText = ({ percent }) => (
       {percent} 
   </span>
 );
+
 
 const MainPage = () => {
     const navigate = useNavigate();

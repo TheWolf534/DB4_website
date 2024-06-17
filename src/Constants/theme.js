@@ -52,13 +52,13 @@ const FONT = {
     base_20: {
         fontFamily: 'Helvetica',
         fontSize: '20px',
-        fontWeight: 'normal',
+        fontWeight: 'lighter',
         fontStyle: 'normal',
     },
     base_16: {
         fontFamily: 'Helvetica',
         fontSize: '16px',
-        fontWeight: 'normal',
+        fontWeight: 'lighter',
         fontStyle: 'normal',
     },
     error_16: {
