@@ -24,7 +24,7 @@ const CustomText = ({ percent }) => (
 
 const MainPage = () => {
     const navigate = useNavigate();
-    const progressCircleSize = 200;
+    const progressCircleSize = 190;
     return (
     <div className= "container" >
        
@@ -54,10 +54,12 @@ const MainPage = () => {
           </div>
           <div class="period-overview">
             <center>
-            <Progress size={progressCircleSize} format={(percent) =>  <CustomText percent={percent + "mol/dm³"}/>} type="dashboard" percent={30} strokeColor={twoColors} style = {FONT.smallInfo_12}/>
+            <Progress size={progressCircleSize} format={(percent) =>  <CustomText percent={percent + "mol/dm³"}/>} type="dashboard" percent={90} strokeColor={twoColors} style = {FONT.smallInfo_12}/>
             <p style = {FONT.base_16}>ALGEA CONCENTRATION</p>
             </center>
           </div>
+      </div>
+      <div className = "overviewContainer" >
     <div class = 'period-overview'>
         <center> 
         <Progress size={progressCircleSize} format={(percent) => <CustomText percent={percent + "W"}/>} type="dashboard" percent={30} strokeColor={twoColors} />
