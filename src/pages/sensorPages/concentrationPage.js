@@ -3,6 +3,7 @@ import {COLORS, FONT} from '../../Constants/theme.js';
 import { Flex, Progress } from 'antd';
 import '../../styles/sensorPage.css';
 import {useNavigate} from "react-router-dom";
+import  PlotConc from '../../components/PlotTemp.js';
 
 const twoColors = {
     '0%': '#F6454C',
@@ -39,7 +40,7 @@ const Concentration = () => {
                 <p style = {FONT.base_16}>CONCENTRATION</p>
             </div>
             <button onClick={() => navigate('/lightintensity')} className = 'period'> 
-                <p  style = {FONT.base_16}> INTENSITY </p>
+                <p  style = {FONT.base_16}>MOTOR </p>
             </button>
 
         </div>
@@ -50,17 +51,15 @@ const Concentration = () => {
                 <div style= {{padding:30}}>
                      <center>
 
-                    <Progress size={250} format={(percent) => <CustomText percent={percent + "°"}/>} type="dashboard" percent={30} strokeColor={twoColors} circleTextFontSize = {'1em'} />
-                    <p style = {FONT.base_16}>CURRENT TEMPERATURE</p>
+                  
+                        <Progress size={250} format={(percent) =>  <CustomText percent={percent + "mol/dm³"}/>} type="dashboard" percent={30} strokeColor={twoColors} style = {FONT.smallInfo_12}/>
+                        <p style = {FONT.base_16}>ALGEA CONCENTRATION</p>
+            
                     </center>
                 </div>
                 </p>
                 
-                <p className = "leftscreen" style={{height: '150px'}}>
-                    <center>
-                        <p style = {FONT.base_16}>ADJUST CONCENTRATION</p>
-                            </center>
-                        </p>
+             
             </div>  
             
             <div className= 'period'>
@@ -69,7 +68,7 @@ const Concentration = () => {
             <div className = "period">
                 <div className="rightscreen">
                     <center>
-                        <p style = {FONT.bold_20}>DATA inuput here hahhahah long and a lot of stuff takes  alot of space bigtime thing and big time </p>
+                     <PlotConc/>
                     </center>
                 </div>
             </div> 

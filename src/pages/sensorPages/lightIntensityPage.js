@@ -39,7 +39,7 @@ const navigate = useNavigate();
                 <p  style = {FONT.base_16}> CONCENTRATION</p>
             </button>
             <div className = 'selected-period'> 
-                <p style = {FONT.base_16}>INTENSITY</p>
+                <p style = {FONT.base_16}>MOTOR</p>
             </div>
 
     </div>

@@ -40,7 +40,7 @@ const MainPage = () => {
                 <p  style = {FONT.base_16}> CONCENTRATION </p>
             </button>
             <button onClick={() => navigate('/lightintensity')} className = 'period'> 
-                <p  style = {FONT.base_16}> INTENSITY </p>
+                <p  style = {FONT.base_16}> MOTOR</p>
             </button>
 
         </div>
@@ -72,9 +72,10 @@ const MainPage = () => {
         <p style = {FONT.base_16 }>PUMP SPEED</p>
      </center>
     </div>
-            
-
+        
         </div>
+        <div class = 'overviewContainer'></div>
+        
       </div>
     )
 };
