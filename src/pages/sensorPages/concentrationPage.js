@@ -3,7 +3,7 @@ import {COLORS, FONT} from '../../Constants/theme.js';
 import { Flex, Progress } from 'antd';
 import '../../styles/sensorPage.css';
 import {useNavigate} from "react-router-dom";
-import  PlotConc from '../../components/PlotTemp.js';
+import  PlotConc from '../../components/PlotConc.js';
 
 const twoColors = {
     '0%': '#F6454C',
