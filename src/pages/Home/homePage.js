@@ -62,7 +62,7 @@ const MainPage = () => {
           <div class="period-overview" >
             <center>
 
-            <Progress size={progressCircleSize} format={(percent) => <CustomText percent={percent + "°"}/>} type="dashboard" percent={getLatestData("temperature")} strokeColor={twoColors} circleTextFontSize = {'1em'} />
+            <Progress size={progressCircleSize} format={(percent) => <CustomText percent={percent + "°"}/>} type="dashboard" percent={30} strokeColor={twoColors} circleTextFontSize = {'1em'} />
             <p style = {FONT.base_16}>CURRENT TEMPERATURE</p>
           </center>
           </div>
