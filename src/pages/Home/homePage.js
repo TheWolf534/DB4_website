@@ -3,6 +3,20 @@ import { Flex, Progress } from 'antd';
 import {COLORS, FONT} from '../../Constants/theme.js';
 import '../../styles/sensorPage.css';
 import {useNavigate} from "react-router-dom";
+import api from '../../api';
+
+function getLatestData(sensor) {
+    api.get(`/api/latest-data-point/?data_points=${sensor}`)
+    .then((res) => res.data)
+    .then((data) => {
+        return data;
+        console.log(data);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+}
+
 const twoColors = {
   '0%': '#F6454C',
   '50%': '#F5A7AA',
@@ -48,7 +62,7 @@ const MainPage = () => {
           <div class="period-overview" >
             <center>
 
-            <Progress size={progressCircleSize} format={(percent) => <CustomText percent={percent + "°"}/>} type="dashboard" percent={30} strokeColor={twoColors} circleTextFontSize = {'1em'} />
+            <Progress size={progressCircleSize} format={(percent) => <CustomText percent={percent + "°"}/>} type="dashboard" percent={getLatestData("temperature")} strokeColor={twoColors} circleTextFontSize = {'1em'} />
             <p style = {FONT.base_16}>CURRENT TEMPERATURE</p>
           </center>
           </div>
