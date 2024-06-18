@@ -25,6 +25,7 @@
     
     
     
+    
 }
 .screenContainer { 
     position: relative;
@@ -51,7 +52,7 @@
     width: auto;
     padding: 20px;
 }
-.period,selected-period,hover-period{
+.period,selected-period{
     padding-left: 20px;
     padding-right: 20px;
     height:40;
@@ -63,10 +64,25 @@
 
 
 }
-.hover-period{
+.period:hover {
+    opacity: 0.7;
+    transform: scale(1.05);
     background-color: #7FB7BC, 0.5;
+  }
+  .period1,selected-period1{
+    padding-left: 20px;
+    padding-right: 20px;
+    height:40;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0); /* Transparent white background */
+    border: none; /* Add border styles if necessary */
+    border-radius: 50px;
+
 
 }
+
+
 .period-overview{
     padding-left: 20px;
     padding-right: 20px;

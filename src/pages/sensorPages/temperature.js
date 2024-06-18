@@ -46,7 +46,7 @@ const Temperature = () => {
     </div>
     
     <div className = "screenContainer" >
-        <div className = "period">
+        <div className = "period1">
             <p className = "leftscreen">
                 <div style= {{padding:30}}>
                      <center>
@@ -68,11 +68,11 @@ const Temperature = () => {
             
         </div>  
         
-        <div className= 'period'>
+        <div className= 'period1'>
 
         </div>
         
-        <div className = "period">
+        <div className = "period1">
             <div className="rightscreen">
                 <center>
                     <PlotTemp/>
