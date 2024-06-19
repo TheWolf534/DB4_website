@@ -43,7 +43,7 @@ const PID = () => {
               <div style= {{padding:'20px'}}>
                 <label style={FONT.base_20}>P  </label>
                 <input 
-                  type="text" 
+                  type="number" 
                   name="P" 
                   value={parameters.P} 
                   onChange={handleInputChange}
@@ -53,7 +53,7 @@ const PID = () => {
               <div style= {{padding:'20px'}}>
                 <label style={FONT.base_20}>I  </label>
                 <input 
-                  type="text" 
+                  type="number" 
                   name="I" 
                   value={parameters.I} 
                   onChange={handleInputChange} 
@@ -63,13 +63,14 @@ const PID = () => {
               <div style= {{padding:'20px'}}>
                 <label style={FONT.base_24}>D  </label>
                 <input 
-                  type="text" 
+                  type="number" 
                   name="D" 
                   value={parameters.D} 
                   onChange={handleInputChange} 
                 />
+                <p>Current D: {Sparameters.D}</p>
               </div>
-              <p>Current D: {Sparameters.D}</p>
+              
               <button onClick={submit} className='period' style={{border: '1px solid black'}}>
                 <p style={FONT.base_16}>SUBMIT</p>
               </button>
