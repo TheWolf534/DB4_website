@@ -61,7 +61,7 @@ const PID = () => {
       </div>
 <div className='leftscreen' style = {{paddingTop:'20px', height:'auto',border:'none'}}>
     <center>
-    <div style={{paddingBottom:'5px'}}>
+    <div style={{paddingBottom:'0px'}}>
 
               <h1 style={FONT.base_20}>Enter new values</h1>
     </div>
