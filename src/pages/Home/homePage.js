@@ -3,6 +3,9 @@ import { Flex, Progress } from 'antd';
 import {COLORS, FONT} from '../../Constants/theme.js';
 import '../../styles/sensorPage.css';
 import {useNavigate} from "react-router-dom";
+import SliderMotor from '../../components/SliderMotor.js';
+import SliderTemp from '../../components/SliderTemp.js';
+
 const twoColors = {
   '0%': '#F6454C',
   '50%': '#F5A7AA',
@@ -44,7 +47,8 @@ const MainPage = () => {
             </button>
 
         </div>
-        <div className = "overviewContainer" >
+        <div className = 'overviewContainer' >
+      
           <div class="period-overview" >
             <center>
 
@@ -58,8 +62,7 @@ const MainPage = () => {
             <p style = {FONT.base_16}>ALGEA CONCENTRATION</p>
             </center>
           </div>
-      </div>
-      <div className = "overviewContainer" >
+   
     <div class = 'period-overview'>
         <center> 
         <Progress size={progressCircleSize} format={(percent) => <CustomText percent={percent + "W"}/>} type="dashboard" percent={30} strokeColor={twoColors} />
@@ -74,11 +77,17 @@ const MainPage = () => {
         <p style = {FONT.base_16 }>PUMP SPEED</p>
      </center>
     </div>
-        
-        </div>
-        <div class = 'overviewContainer'></div>
-        
+      <div className = 'adjustmentContainer'>
+      <div className='overviewContainer'> 
+        <center>
+        <SliderTemp />
+        <SliderMotor />
+        </center>
       </div>
+      </div>
+      </div>
+      </div>
+ 
     )
 };
 
