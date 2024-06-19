@@ -43,6 +43,9 @@ const Temperature = () => {
             <button onClick={() => navigate('/lightintensity')} className = 'period'> 
                 <p  style = {FONT.base_16}>MOTOR </p>
             </button>
+            <button onClick={() => navigate('/pid')} className = 'period'> 
+                <p  style = {FONT.base_16}>PID </p>
+            </button>
     </div>
     
     <div className = "screenContainer" >

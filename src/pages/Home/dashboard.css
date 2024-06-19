@@ -1,0 +1,12 @@
+.Widget {
+    text-align: center;
+    display: 400px;;
+
+}
+
+.widgetTitle {
+    font-size: 100px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+

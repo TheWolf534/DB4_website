@@ -42,6 +42,10 @@ const navigate = useNavigate();
             <div className = 'selected-period'> 
                 <p style = {FONT.base_16}>MOTOR</p>
             </div>
+            <button onClick={() => navigate('/pid')} className = 'period'> 
+                <p  style = {FONT.base_16}> PID</p>
+            </button>
+            
 
     </div>
     
