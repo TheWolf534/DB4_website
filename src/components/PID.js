@@ -35,13 +35,39 @@ const PID = () => {
   };
   return (
     <div className="screen">
-<div className='leftscreen' style = {{padding:'0px', height:'auto',border:'none'}}>
+        <center><p style={FONT.base_20}>PID values</p></center>
+      <div className= 'pidcontainer'>
+      <div className= 'pid'>
+          <center>
+      <p style={FONT.smallInfo_12}> P</p>
+      <p style={FONT.bold_20}>  {Sparameters.P}</p>
+      </center>
+      </div>
+      
+      <div className= 'pid'>
+          <center>
+      
+      <p style={FONT.smallInfo_12}> I</p>
+      <p style={FONT.bold_20}>  {Sparameters.I}</p>
+          </center>
+      </div>
+      <div className= 'pid' style={{borderRight:'none'}}>
+          <center>
+      
+      <p style={FONT.smallInfo_12}> D</p>
+      <p style={FONT.bold_20}>  {Sparameters.D}</p>
+          </center>
+      </div>
+      </div>
+<div className='leftscreen' style = {{paddingTop:'20px', height:'auto',border:'none'}}>
     <center>
+    <div style={{paddingBottom:'5px'}}>
 
-              <h1 style={FONT.base_20}>Enter PID values</h1>
-              <hr></hr>
+              <h1 style={FONT.base_20}>Enter new values</h1>
+    </div>
             
-              <div class="input-container">
+            
+              <div class="input-container" >
   <input 
     type="text" 
     name="P" 
@@ -53,7 +79,7 @@ const PID = () => {
   />
   <label class="input-label">Proportional</label>
 </div>
-<hr></hr>
+
               <div class="input-container">
   <input 
     type="text" 
@@ -66,7 +92,7 @@ const PID = () => {
   />
   <label class="input-label">Integral</label>
 </div>
-<hr></hr>
+
 <div class="input-container">
   <input 
     type="text" 
@@ -86,17 +112,19 @@ const PID = () => {
               </button>
     </center>
 </div>
-<div className = 'rightscreen' style = {{padding:'20px', height:'auto', border:'none'}}>
-    <p style={FONT.base_20}>PID values</p>
-<hr></hr>
-<center>
-<p style={FONT.bold_20}> D =  {Sparameters.D}</p>
-<hr></hr>
-<p style={FONT.bold_20}>I =  {Sparameters.I}</p>
-<hr></hr>
-<p style={FONT.bold_20}>P = {Sparameters.P} </p>
-</center>
-    </div>
+<div>
+
+
+    
+
+  
+
+
+
+</div>
+
+
+  
 </div>
   );
 };

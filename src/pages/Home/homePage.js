@@ -104,7 +104,7 @@ const MainPage = () => {
         </div>
         </div> 
         <div class = 'overviewContainer'>
-        <div class= 'rightscreen' style = {{margin:'0px',padding:'10px'}}>
+        <div class= 'rightscreen' style = {{margin:'0px', backgroundColor:'transparent'}}>
         <PID/>
         </div>
         </div>

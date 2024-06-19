@@ -173,14 +173,6 @@
     margin: 20px;
     /* Optional blur effect */
 }
-.vertical-line{
-    border-left: 1.5px solid #000000;
-    height: 60%;
-    margin-top: 80px;
-    justify-content: center;
-    align-items: center;
-    
-}
 
 
 .inputgroup {
@@ -258,7 +250,32 @@ hr {
     opacity: 1;
     padding: 5px;
   }
+.pidcontainer{
+    justify-content: center;
+    padding: 20px;
+    flex: 1;
+    flex-direction: row;
+    display: flex;
+    position: relative;
+    align-self: center;
+    background-color: rgba(53, 103, 107, 0.1);
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+.pid{
+    min-width: 50px;
+      padding-left: 15px;
+        padding-right: 15px;
+        height:70px;
+      
+        border-right:0.5px solid #000;
+       
+    
+    
+    }
   
+    
   /* Button styles */
  
   
