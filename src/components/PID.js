@@ -1,10 +1,8 @@
 // src/PIDPage.js
 import React, { useState } from 'react';
 import { COLORS, FONT } from '../Constants/theme.js';
-
+import '../styles/sensorPage.css';
 import { useNavigate } from "react-router-dom";
-
-
 
 
 
@@ -36,47 +34,70 @@ const PID = () => {
     }));
   };
   return (
-<div>
+    <div className="screen">
+<div className='leftscreen' style = {{padding:'0px', height:'auto',border:'none'}}>
     <center>
 
-              <h1 style={FONT.base_20}>PID</h1>
-              <div style= {{padding:'20px'}}>
-                <label style={FONT.base_20}>P  </label>
-                <input 
-                  type="text" 
-                  name="P" 
-                  value={parameters.P} 
-                  onChange={handleInputChange}
-                />
-                <p>Current P:{Sparameters.P} </p>
-              </div>
-              <div style= {{padding:'20px'}}>
-                <label style={FONT.base_20}>I  </label>
-                <input 
-                  type="text" 
-                  name="I" 
-                  value={parameters.I} 
-                  onChange={handleInputChange} 
-                />
-                <p>Current I: {Sparameters.I}</p>
-              </div>
-              <div style= {{padding:'20px'}}>
-                <label style={FONT.base_24}>D  </label>
-                <input 
-                  type="text" 
-                  name="D" 
-                  value={parameters.D} 
-                  onChange={handleInputChange} 
-                />
-              </div>
-              <p>Current D: {Sparameters.D}</p>
-              <button onClick={submit} className='period' style={{border: '1px solid black'}}>
+              <h1 style={FONT.base_20}>Enter PID values</h1>
+              <hr></hr>
+            
+              <div class="input-container">
+  <input 
+    type="text" 
+    name="P" 
+    value={parameters.P} 
+    onChange={handleInputChange} 
+    class="focus-input" 
+    placeholder=" " 
+    required
+  />
+  <label class="input-label">Proportional</label>
+</div>
+<hr></hr>
+              <div class="input-container">
+  <input 
+    type="text" 
+    name="I" 
+    value={parameters.I} 
+    onChange={handleInputChange} 
+    class="focus-input" 
+    placeholder=" " 
+    required
+  />
+  <label class="input-label">Integral</label>
+</div>
+<hr></hr>
+<div class="input-container">
+  <input 
+    type="text" 
+    name="D" 
+    value={parameters.D} 
+    onChange={handleInputChange} 
+    className="focus-input" 
+    placeholder=" " 
+    required
+  />
+  <label class="input-label">Derivative</label>
+</div>
+       
+
+              <button onClick={submit} className='period' style={{border: '0.5px solid black', marginTop:'20px'}}>
                 <p style={FONT.base_16}>SUBMIT</p>
               </button>
-
     </center>
 </div>
-
+<div className = 'rightscreen' style = {{padding:'20px', height:'auto', border:'none'}}>
+    <p style={FONT.base_20}>PID values</p>
+<hr></hr>
+<center>
+<p style={FONT.bold_20}> D =  {Sparameters.D}</p>
+<hr></hr>
+<p style={FONT.bold_20}>I =  {Sparameters.I}</p>
+<hr></hr>
+<p style={FONT.bold_20}>P = {Sparameters.P} </p>
+</center>
+    </div>
+</div>
   );
 };
 
