@@ -91,7 +91,7 @@ const MainPage = () => {
       </div>
         </div>
         <div class = 'overviewContainer'>
-        <div class= 'rightscreen' style = {{width:'254px',margin:'0px', padding:'10px'}}>
+        <div class= 'rightscreen' style = {{width:'254px',margin:'0px', padding:'10px', backgroundColor:'transparent'}}>
           <center>
 
           <SliderTemp/>
