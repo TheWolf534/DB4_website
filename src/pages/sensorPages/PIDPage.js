@@ -5,11 +5,6 @@ import '../../styles/sensorPage.css';
 import { useNavigate } from "react-router-dom";
 import PlotTemp from '../../components/PlotTemp.js';
 
-
-
-
-
-
 const PIDPage = () => {
   const navigate = useNavigate();
   const [parameters, setParameters] = useState({
@@ -17,6 +12,19 @@ const PIDPage = () => {
     I: '',
     D: ''
   });
+  const [Sparameters, SsetParameters] = useState({
+    P: '',
+    I: '',
+    D: ''
+  });
+  
+  const submit = () => {
+    SsetParameters({
+      P: parameters.P,
+      I: parameters.I,
+      D: parameters.D
+    });
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -59,6 +67,7 @@ const PIDPage = () => {
                   value={parameters.P} 
                   onChange={handleInputChange} 
                 />
+                <p>Current P: {Sparameters.P}</p>
               </div>
               <div className="input-group">
                 <label style={FONT.base_24}>I</label>
@@ -68,7 +77,7 @@ const PIDPage = () => {
                   value={parameters.I} 
                   onChange={handleInputChange} 
                 />
-                <p>{parameters.I}</p>
+                <p>Current I: {Sparameters.I}</p>
               </div>
               <div className="input-group">
                 <label style={FONT.base_24}>D</label>
@@ -78,6 +87,10 @@ const PIDPage = () => {
                   value={parameters.D} 
                   onChange={handleInputChange} 
                 />
+                <p>Current D: {Sparameters.D}</p>
+                <button onClick={submit} className='period' > 
+                <p style={FONT.base_16}>SUBMIT</p>
+              </button>
               </div>
             </center>
           </div>
