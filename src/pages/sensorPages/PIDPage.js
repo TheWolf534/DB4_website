@@ -4,7 +4,7 @@ import { COLORS, FONT } from '../../Constants/theme.js';
 import '../../styles/sensorPage.css';
 import { useNavigate } from "react-router-dom";
 import PlotTemp from '../../components/PlotTemp.js';
-
+import PID from '../../components/PID.js';
 
 
 
@@ -49,37 +49,8 @@ const PIDPage = () => {
       <div className="screenContainer">
         <div className="period1">
           <div className="leftscreen">
-            <center>
-              <h1 style={FONT.base_24}>PID</h1>
-              <div className="input-group">
-                <label style={FONT.base_24}>P</label>
-                <input 
-                  type="text" 
-                  name="P" 
-                  value={parameters.P} 
-                  onChange={handleInputChange} 
-                />
-              </div>
-              <div className="input-group">
-                <label style={FONT.base_24}>I</label>
-                <input 
-                  type="text" 
-                  name="I" 
-                  value={parameters.I} 
-                  onChange={handleInputChange} 
-                />
-                <p>{parameters.I}</p>
-              </div>
-              <div className="input-group">
-                <label style={FONT.base_24}>D</label>
-                <input 
-                  type="text" 
-                  name="D" 
-                  value={parameters.D} 
-                  onChange={handleInputChange} 
-                />
-              </div>
-            </center>
+           
+            <PID/>
           </div>
         </div>
 
