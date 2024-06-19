@@ -15,6 +15,18 @@ const PID = () => {
     I: '',
     D: ''
   });
+  const [Sparameters, SsetParameters] = useState({
+    P: '',
+    I: '',
+    D: ''
+  });
+  const submit = () => {
+    SsetParameters({
+      P: parameters.P,
+      I: parameters.I,
+      D: parameters.D
+    });
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -34,8 +46,9 @@ const PID = () => {
                   type="text" 
                   name="P" 
                   value={parameters.P} 
-                  onChange={handleInputChange} 
+                  onChange={handleInputChange}
                 />
+                <p>Current P:{Sparameters.P} </p>
               </div>
               <div style= {{padding:'20px'}}>
                 <label style={FONT.base_20}>I  </label>
@@ -45,7 +58,7 @@ const PID = () => {
                   value={parameters.I} 
                   onChange={handleInputChange} 
                 />
-                <p>{parameters.I}</p>
+                <p>Current I: {Sparameters.I}</p>
               </div>
               <div style= {{padding:'20px'}}>
                 <label style={FONT.base_24}>D  </label>
@@ -56,6 +69,11 @@ const PID = () => {
                   onChange={handleInputChange} 
                 />
               </div>
+              <p>Current D: {Sparameters.D}</p>
+              <button onClick={submit} className='period' style={{border: '1px solid black'}}>
+                <p style={FONT.base_16}>SUBMIT</p>
+              </button>
+
     </center>
 </div>
 

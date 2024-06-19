@@ -158,7 +158,14 @@
 
 
 .inputgroup {
-    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius:20px;
+    background-color: #7FB7BC, 0;
+    border: 0.5px solid #000000;
+    margin: 20px;
+    margin-right: 20px;
+    height: 500px;
 }
 
 /* Styles for the right data section */
