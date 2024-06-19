@@ -21,7 +21,7 @@
     border-radius: 50px;
     margin-left: 50px;
     align-self: center;
-    border: none;
+    border: 0.5px solid #000000;
     
     
     
@@ -110,7 +110,7 @@
     width: 62px; /* Width of the button */
     height: 62px; /* Height of the button */
     border-radius: 41px; /* Half of width/height to make it circular */
-    border: 1px solid black; /* Border color and thickness */
+    border: 0.5px solid black; /* Border color and thickness */
     background-color: transparent; /* Transparent background */
     text-align: center; /* Center text */
     text-decoration: none; /* Remove underline from text */
@@ -129,7 +129,7 @@
     align-items: center;
     border-radius:20px;
     background-color: #7FB7BC, 0;
-    border: 1px solid #000000;
+    border: 0.5px solid #000000;
     margin: 20px;
     margin-right: 20px;
     height:334px;

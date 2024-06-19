@@ -4,6 +4,11 @@ import { COLORS, FONT } from '../../Constants/theme.js';
 import '../../styles/sensorPage.css';
 import { useNavigate } from "react-router-dom";
 import PlotTemp from '../../components/PlotTemp.js';
+import PID from '../../components/PID.js';
+
+
+
+
 
 const PIDPage = () => {
   const navigate = useNavigate();
@@ -57,6 +62,8 @@ const PIDPage = () => {
       <div className="screenContainer">
         <div className="period1">
           <div className="leftscreen">
+           
+            <PID/>
             <center>
               <h1 style={FONT.base_24}>PID</h1>
               <div className="input-group">

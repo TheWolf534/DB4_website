@@ -1,0 +1,66 @@
+// src/PIDPage.js
+import React, { useState } from 'react';
+import { COLORS, FONT } from '../Constants/theme.js';
+
+import { useNavigate } from "react-router-dom";
+
+
+
+
+
+const PID = () => {
+  const navigate = useNavigate();
+  const [parameters, setParameters] = useState({
+    P: '',
+    I: '',
+    D: ''
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setParameters(prevParams => ({
+      ...prevParams,
+      [name]: value
+    }));
+  };
+  return (
+<div>
+    <center>
+
+              <h1 style={FONT.base_20}>PID</h1>
+              <div style= {{padding:'20px'}}>
+                <label style={FONT.base_20}>P  </label>
+                <input 
+                  type="text" 
+                  name="P" 
+                  value={parameters.P} 
+                  onChange={handleInputChange} 
+                />
+              </div>
+              <div style= {{padding:'20px'}}>
+                <label style={FONT.base_20}>I  </label>
+                <input 
+                  type="text" 
+                  name="I" 
+                  value={parameters.I} 
+                  onChange={handleInputChange} 
+                />
+                <p>{parameters.I}</p>
+              </div>
+              <div style= {{padding:'20px'}}>
+                <label style={FONT.base_24}>D  </label>
+                <input 
+                  type="text" 
+                  name="D" 
+                  value={parameters.D} 
+                  onChange={handleInputChange} 
+                />
+              </div>
+    </center>
+</div>
+
+  );
+};
+
+export default PID;
+// src/components/PID.js
