@@ -80,7 +80,7 @@ const MainPage = () => {
        
           <div class="period-overview" >
             <center>
-            <Progress size={progressCircleSize} format={(percent) =>  <CustomText percent={percent + "mol/dm³"}/>} type="dashboard" percent={90} strokeColor={twoColors} style = {FONT.smallInfo_12}/>
+            <Progress size={progressCircleSize} format={(percent) =>  <CustomText percent={percent + "ppm"}/>} type="dashboard" percent={data.concentration} strokeColor={twoColors} style = {FONT.smallInfo_12}/>
             <p style = {FONT.base_16}>ALGEA CONCENTRATION</p>
             </center>
             <center>
