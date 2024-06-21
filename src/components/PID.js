@@ -1,12 +1,8 @@
 // src/PIDPage.js
-import React, { useState } from 'react';
+import React, { Component, useState } from 'react';
 import { COLORS, FONT } from '../Constants/theme.js';
 
-import { useNavigate } from "react-router-dom";
-
-
-
-
+import { json, useNavigate } from "react-router-dom";
 
 const PID = () => {
   const navigate = useNavigate();
@@ -27,7 +23,6 @@ const PID = () => {
       D: parameters.D
     });
   };
-
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setParameters(prevParams => ({
