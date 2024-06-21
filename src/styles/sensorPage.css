@@ -1,0 +1,281 @@
+.container {
+    background:linear-gradient(90deg, #7FB7BC 0%, #b6d4d7 40%, #80B8BC 80%, #80B8BC 100%);
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    justify-content: baseline;
+     /* Full viewport height */;
+    min-height: 100vh;
+    min-width: 100dvh;
+
+}
+
+
+  
+.periodContainer { 
+    position: sticky;
+    display:flex; 
+    max-width: fit-content;
+    flex-direction: row;
+    margin-top: 50px;
+    border-radius: 50px;
+    margin-left: 50px;
+    align-self: center;
+    border: 0.5px solid #000000;
+    
+    
+    
+    
+}
+.screenContainer { 
+    position: relative;
+    display:flex; 
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 50px;
+    border-radius: 50px;
+    margin-left: 50px;
+    align-self: center;
+    width: auto;
+    
+}
+.overviewContainer{ 
+    position: relative;
+    display:flex; 
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 0px;
+    border-radius: 50px;
+    margin-left: 50px;
+    align-self: center;
+    width: auto;
+    padding: 20px;
+   
+}
+.overviewBorder {
+    position: relative;
+    display:flex; 
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 0px;
+    border-radius: 50px;
+    margin-left: 50px;
+    align-self: center;
+    width: auto;
+    padding: 20px;
+   
+}
+.adjustmentContainer { 
+    position: relative;
+    display:flex; 
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    border-radius: 50px;
+    margin-left: 50px;
+    align-self: center;
+    width: auto;
+    padding: 20px;
+}
+.period,selected-period{
+    padding-left: 20px;
+    padding-right: 20px;
+    height:40;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0); /* Transparent white background */
+    border: none; /* Add border styles if necessary */
+    border-radius: 50px;
+
+
+}
+.period:hover {
+    opacity: 0.7;
+    transform: scale(1.05);
+    background-color: #7FB7BC, 0.5;
+  }
+  .period1,selected-period1{
+    padding-left: 20px;
+    padding-right: 20px;
+    height:40;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0); /* Transparent white background */
+    border: none; /* Add border styles if necessary */
+    border-radius: 50px;
+
+
+}
+
+
+.period-overview{
+    padding: 30px;
+    height:40;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  
+}
+.selected-period{
+    background-color: #7FB7BC;
+    border-radius: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height:40;
+    justify-content: center;
+    align-items: center;
+    
+}
+.button {
+    display: flex; /* To center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 62px; /* Width of the button */
+    height: 62px; /* Height of the button */
+    border-radius: 41px; /* Half of width/height to make it circular */
+    border: 0.5px solid black; /* Border color and thickness */
+    background-color: transparent; /* Transparent background */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline from text */
+    margin: 4px 2px; /* Margin around the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 0; /* Remove padding to ensure circle shape */
+  }
+  .button p {
+    margin: 0; /* Remove default margin from p element */
+  }
+
+/* Styles for the left screen */
+
+.leftscreen {
+    justify-content: center;
+    align-items: center;
+    border-radius:20px;
+    background-color: #7FB7BC, 0;
+    border: 0.5px solid #000000;
+    margin: 20px;
+    margin-right: 20px;
+    height:334px;
+    
+    
+    /* Optional blur effect */
+}
+.rightscreen {
+    justify-content: center;
+    align-items: center;
+    max-height:500px;
+    border-radius:20px;
+    background-color: rgba(53, 103, 107, 0.1);
+    padding:20px;
+    margin: 20px;
+    /* Optional blur effect */
+}
+
+
+.inputgroup {
+    justify-content: center;
+    align-items: center;
+    border-radius:20px;
+    background-color: #7FB7BC, 0;
+    border: 0.5px solid #000000;
+    margin: 20px;
+    margin-right: 20px;
+    height: 500px;
+}
+hr {
+    border: 0;
+    height: 0.5px;
+    background-color: #000;
+    margin: 20px 0;
+  }
+
+/* Styles for the right data section */
+  /* Container for input and label */
+.input-container {
+    position: relative;
+ /* Adjust width if needed */
+    margin: 20px 0;
+  }
+  
+  /* Input styles */
+  .focus-input {
+    width: 100%; /* Adjust to fit within the container */
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 0.5px solid #000000; /* Bottom border only */
+    background-color: rgba(53, 103, 107, 0.1); /* Transparent background */
+    transition: border-color 0.6s;
+  }
+  
+  .focus-input:focus {
+    border-bottom: 0.5px solid #66afe9; /* Change bottom border color on focus */
+    outline: none;
+    background-color: rgba(53, 103, 107, 0.1); /* Ensure background remains transparent */
+  }
+  
+  .focus-input::placeholder {
+    color: #000000; /* Color of the placeholder text */
+    opacity: 0.5;
+    font-size: 20px; /* Fixed the font-size property */
+    font-family: 'Helvetica';
+    font-weight: lighter; /* Removed quotes for the font-weight property */
+  }
+  
+  /* Placeholder text as label */
+  .input-label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    font-size: 20px;
+    font-family: 'Helvetica';
+    font-weight: lighter;
+    color: #000000;
+    opacity: 0.5;
+    pointer-events: none;
+    transform: translateY(-40%);
+    transition: 0.2s ease all;
+  }
+  
+  /* Floating label effect */
+  .focus-input:focus ~ .input-label,
+  .focus-input:not(:placeholder-shown) ~ .input-label {
+    top:-10px;
+    left:0;
+    font-size: 12px;
+    color: #000000;
+    opacity: 1;
+    padding: 5px;
+  }
+.pidcontainer{
+    justify-content: center;
+    padding: 20px;
+    flex: 1;
+    flex-direction: row;
+    display: flex;
+    position: relative;
+    align-self: center;
+    background-color: rgba(53, 103, 107, 0.1);
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+.pid{
+    min-width: 50px;
+      padding-left: 15px;
+        padding-right: 15px;
+        height:70px;
+      
+        border-right:0.5px solid #000;
+       
+    
+    
+    }
+  
+    
+  /* Button styles */
+ 
+  
