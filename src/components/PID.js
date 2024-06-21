@@ -68,7 +68,7 @@ const PID = () => {
             
               <div class="input-container" >
   <input 
-    type="text" 
+    type="number" 
     name="P" 
     value={parameters.P} 
     onChange={handleInputChange} 
@@ -81,7 +81,7 @@ const PID = () => {
 
               <div class="input-container">
   <input 
-    type="text" 
+    type="number" 
     name="I" 
     value={parameters.I} 
     onChange={handleInputChange} 
@@ -94,7 +94,7 @@ const PID = () => {
 
 <div class="input-container">
   <input 
-    type="text" 
+    type="number" 
     name="D" 
     value={parameters.D} 
     onChange={handleInputChange} 
