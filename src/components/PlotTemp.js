@@ -20,10 +20,13 @@ function PlotTemp({xaxis, yaxis}) {
         layout={{
           width: 'auto',
           height: 'auto',
-          title: 'Temperature vs. Time',
+          title: 'WATER TEMPERATURE OVER TIME',
           plot_bgcolor: 'transparent',
           paper_bgcolor: 'transparent',
           showgrid: false,
+          font_family:'Helvetica',
+          font_weight:'lighter',
+          
 
             xaxis: {
               title: 'Time (s)',

@@ -72,11 +72,14 @@ const Concentration = () => {
             <button onClick={() => navigate('/lightintensity')} className = 'period'> 
                 <p  style = {FONT.base_16}>MOTOR </p>
             </button>
+            <button onClick={() => navigate('/pid')} className = 'period'> 
+                <p  style = {FONT.base_16}> PID</p>
+            </button>
 
         </div>
         
         <div className = "screenContainer" >
-            <div className = "period">
+            <div className = "period1">
                 <p className = "leftscreen">
                 <div style= {{padding:30}}>
                      <center>
@@ -92,10 +95,10 @@ const Concentration = () => {
              
             </div>  
             
-            <div className= 'period'>
+            <div className= 'period1'>
             </div>
             
-            <div className = "period">
+            <div className = "period1">
                 <div className="rightscreen">
                     <center>
                      <PlotConc xaxis={timestampArray} yaxis={concentrationArray}/>
