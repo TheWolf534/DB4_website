@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {COLORS, FONT} from '../../Constants/theme.js';
 import '../../styles/sensorPage.css';
 import { Flex, Progress } from 'antd';
@@ -25,7 +25,23 @@ const twoColors = {
 
   
 const Intensity = () => {
-const navigate = useNavigate();
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        fetchData();
+        const interval = setInterval(fetchData, 5000); // Fetch data every 5 seconds
+  
+        return () => clearInterval(interval); // Clear interval on component unmount
+      }, []);
+  
+    async function fetchData() {
+      const result = await fetch("http://51.20.235.196:8000/api/sensor-data/latest");
+      const body = await result.json();
+      console.log(body[0]);  // Log the first object in the array
+      setData(body[0]);  // Set the state with the first object
+    }
+
+    const navigate = useNavigate();
    return(
     <div className= "container">
        

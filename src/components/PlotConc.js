@@ -3,26 +3,44 @@
 import React from 'react';
 import Plot from 'react-plotly.js';
 
-class PlotConc extends React.Component {
-  render() {
-    return (
-      <Plot
-        data={[
-          {
-            x: [1, 2, 3],
-            y: [2, 6, 3],
-            type: 'scatter',
-            mode: 'lines+markers',
-            marker: {color: 'red'},
+function PlotConc({xaxis, yaxis}) {
+  return (
+    <Plot
+      data={[
+        {
+          x:xaxis, 
+          y:yaxis,
+          type: 'scatter',
+          mode: 'lines+markers',
+          marker: {color: 'red'},
+       
+        },
+  
+      ]}
+      layout={{
+        width: 'auto',
+        height: 'auto',
+        title: 'Concentration vs. Time',
+        plot_bgcolor: 'transparent',
+        paper_bgcolor: 'transparent',
+        showgrid: false,
+
+          xaxis: {
+            title: 'Time (s)',
+            type: 'date',
+            showgrid: false,
+            zeroline: false
           },
-    
-        ]}
-        layout={ {width: 'auto', height: 'auto', title: 'A Fancy Plot', plot_bgcolor: 'transparent', // Set background color to transparent
-        paper_bgcolor: 'transparent', // Set paper (plot area) background color to transparent
-        showgrid: false, }}// Hide gridlines}
-      />
-    );
-  }
+          yaxis: {
+            title: 'Concentration (ppm)',
+            showline: false
+          }
+        
+      
+      }}
+      
+    />
+  );
 }
 
 export default PlotConc;
