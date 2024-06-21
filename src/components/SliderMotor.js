@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Slider, Switch } from 'antd';
 import './components.css'; // Import CSS file for custom styling
 import { COLORS, FONT } from '../Constants/theme.js';
-
+import '../styles/sensorPage.css';
 const MotorSlider = () => {
   const [disabled, setDisabled] = useState(false);
   const [value, setValue] = useState(30); // State to hold the slider value
@@ -26,20 +26,24 @@ const MotorSlider = () => {
       <div style={{ marginTop: 10 }}>
         <p style={FONT.base_16}>Selected motor speed: {value} RPM</p>
       </div>
-      <div style={{ display: 'flex', alignItems: 'center', marginTop: 10 }}>
+      <div style={{ flexDirection:'row', alignItems: 'center', marginTop: 10 }}>
         <p style={{ marginRight: 10, ...FONT.base_16 }}>
-          Motor direction: 
-        </p>
+          <hr></hr>
+          Motor direction: {disabled ? 'REVERSE' : 'FORWARD'}
+          <p>
+
         <Switch
           size="large"
           checked={disabled}
           onChange={onChange}
           style={{
             backgroundColor: disabled ? '#F6434A' : '#D9D9D9', // Default color for unchecked state
-            color: '#FFF', // Text color for better readability
+            color: '#FFF', marginLeft:'20px' // Text color for better readability
           }}
-        />
-        <p style={{...FONT.base_16, marginLeft:15}}>{disabled ? 'REVERSE' : 'FORWARD'}</p>
+          />
+          </p>
+       
+          </p>
       </div>
     </>
   );

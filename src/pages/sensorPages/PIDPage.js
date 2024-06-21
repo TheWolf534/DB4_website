@@ -41,9 +41,9 @@ const PIDPage = () => {
 
       <div className="screenContainer">
         <div className="period1">
-          <div className="inputgroup">
+         
                     <PID/>
-          </div>
+          
         </div>
 
         <div className="period1">
