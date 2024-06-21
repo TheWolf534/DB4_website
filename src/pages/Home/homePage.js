@@ -1,21 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Flex, Progress } from 'antd';
 import {COLORS, FONT} from '../../Constants/theme.js';
 import '../../styles/sensorPage.css';
 import {useNavigate} from "react-router-dom";
-import api from '../../api';
 
-function getLatestData(sensor) {
-    api.get(`/api/latest-data-point/?data_points=${sensor}`)
-    .then((res) => res.data)
-    .then((data) => {
-        return data;
-        console.log(data);
-    })
-    .catch((error) => {
-        console.log(error);
-    });
-}
 
 const twoColors = {
   '0%': '#F6454C',
@@ -37,8 +25,31 @@ const CustomText = ({ percent }) => (
 
 
 const MainPage = () => {
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+      fetchData();
+      const interval = setInterval(fetchData, 5000); // Fetch data every 5 seconds
+
+      return () => clearInterval(interval); // Clear interval on component unmount
+    }, []);
+
+    async function fetchData() {
+      const result = await fetch("http://51.20.235.196:8000/api/sensor-data/latest");
+      const body = await result.json();
+      console.log(body[0]);  // Log the first object in the array
+      setData(body[0]);  // Set the state with the first object
+    }
+  
     const navigate = useNavigate();
     const progressCircleSize = 190;
+
+    const headers = {
+      "Content-Type": "application/json",
+    };
+    const url = "http://51.20.235.196:8000/api/sensor-data";
+  
+
     return (
     <div className= "container" >
        
@@ -62,13 +73,13 @@ const MainPage = () => {
           <div class="period-overview" >
             <center>
 
-            <Progress size={progressCircleSize} format={(percent) => <CustomText percent={percent + "°"}/>} type="dashboard" percent={30} strokeColor={twoColors} circleTextFontSize = {'1em'} />
-            <p style = {FONT.base_16}>CURRENT TEMPERATURE</p>
+            <Progress size={progressCircleSize} format={(percent) => <CustomText percent={percent + "°"}/>} type="dashboard" percent={data.temperature} strokeColor={twoColors} circleTextFontSize = {'1em'} />
+            <p style = {FONT.base_16}>CURRENT TEMPERATURE </p>
           </center>
           </div>
           <div class="period-overview">
             <center>
-            <Progress size={progressCircleSize} format={(percent) =>  <CustomText percent={percent + "mol/dm³"}/>} type="dashboard" percent={90} strokeColor={twoColors} style = {FONT.smallInfo_12}/>
+            <Progress size={progressCircleSize} format={(percent) =>  <CustomText percent={percent + "ppm"}/>} type="dashboard" percent={data.concentration} strokeColor={twoColors} style = {FONT.smallInfo_12}/>
             <p style = {FONT.base_16}>ALGEA CONCENTRATION</p>
             </center>
           </div>
@@ -78,6 +89,7 @@ const MainPage = () => {
         <center> 
         <Progress size={progressCircleSize} format={(percent) => <CustomText percent={percent + "W"}/>} type="dashboard" percent={30} strokeColor={twoColors} />
         <p style = {FONT.base_16}>POWER</p>
+        <p style = {FONT.base_16}>{}</p>
         </center>
 
      </div>
