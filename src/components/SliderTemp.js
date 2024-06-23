@@ -1,31 +1,63 @@
-import React, { useState } from 'react';
-import { Slider, Switch } from 'antd';
+import React, { useState, useEffect } from 'react';
+import { Slider } from 'antd';
 import './components.css'; // Import CSS file for custom styling
-import {COLORS, FONT} from '../Constants/theme.js';
 
 const TempSlider = () => {
-  const [disabled, setDisabled] = useState(false);
-  const [value, setValue] = useState(30); // State to hold the slider value
+  const [targetTemperature, setTargetTemperature] = useState(0.0);
 
-  const onChange = (checked) => {
-    setDisabled(checked);
-  };
+  useEffect(() => {
+    fetchTemperatureData();
+    const interval = setInterval(fetchTemperatureData, 5000); // Fetch data every 5 seconds
 
-  const handleSliderChange = (newValue) => {
-    setValue(newValue); // Update the value state when slider value changes
+    return () => clearInterval(interval); // Clear interval on component unmount
+  }, []);
+
+  async function fetchTemperatureData() {
+    try {
+      const response = await fetch("http://51.20.235.196:8000/api/board-parameters/1/");
+      const data = await response.json();
+      setTargetTemperature(data.targetTemperature);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  }
+
+  const handleSliderChange = async (newValue) => {
+    setTargetTemperature(newValue);
+
+    // Perform partial update (PATCH request) to backend
+    try {
+      const response = await fetch("http://51.20.235.196:8000/api/board-parameters/1/", {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          targetTemperature: newValue,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to update target temperature');
+      }
+
+      // Optionally, fetch updated data after successful update
+      fetchTemperatureData();
+    } catch (error) {
+      console.error('Error updating target temperature:', error);
+    }
   };
 
   return (
     <>
       <Slider
-        defaultValue={value}
-        disabled={disabled}
-        className="custom-slider" // Apply custom CSS class
-        trackStyle={{ backgroundColor: 'transparent' }} // Hide default track background
-        onChange={handleSliderChange} // Handle slider value change
+        value={targetTemperature}
+        className="custom-slider"
+        trackStyle={{ backgroundColor: 'transparent' }}
+        onChange={handleSliderChange}
       />
       <div style={{ marginTop: 10 }}>
-        <p style={FONT.base_16}>Selected temperature {value} °C </p>
+        <p>Selected temperature {targetTemperature} °C </p>
       </div>
     </>
   );
