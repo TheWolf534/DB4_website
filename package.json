@@ -19,9 +19,12 @@
     "antd": "^5.18.0",
     "axios": "^1.7.2",
     "framer-motion": "^11.2.10",
+    "papaparse": "^5.4.1",
+    "plotly.js": "^2.33.0",
     "react": "^18.3.1",
     "react-circular-progressbar": "^2.1.0",
     "react-dom": "^18.3.1",
+    "react-plotly.js": "^2.6.0",
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
     "react-transition-group": "^4.4.5",
@@ -52,5 +55,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "jest": "^27.5.1"
   }
 }
