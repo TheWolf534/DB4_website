@@ -67,8 +67,8 @@ const PID = () => {
       }
     } catch (error) {
       console.error("Error submitting data:", error);
-    };
-    formRef.current.reset()
+    }
+    formRef.current.reset();
   };
 
   return (
@@ -106,7 +106,7 @@ const PID = () => {
             <h1 style={FONT.base_20}>Enter new values</h1>
           </div>
 
-          <form onSubmit={handleSubmit} ref={formRef} >
+          <form onSubmit={handleSubmit} ref={formRef}>
             <div class="input-container">
               <input
                 type="number"
@@ -115,7 +115,6 @@ const PID = () => {
                 onChange={handleChange}
                 class="focus-input"
                 placeholder=" "
-                
               />
               <label class="input-label">Proportional</label>
             </div>
@@ -128,7 +127,6 @@ const PID = () => {
                 onChange={handleChange}
                 class="focus-input"
                 placeholder=" "
-                
               />
               <label class="input-label">Integral</label>
             </div>
@@ -141,7 +139,6 @@ const PID = () => {
                 onChange={handleChange}
                 className="focus-input"
                 placeholder=" "
-                
               />
               <label class="input-label">Derivative</label>
             </div>

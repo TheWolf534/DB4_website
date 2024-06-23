@@ -48,8 +48,6 @@ const Concentration = () => {
             // Replace 'T' with space and keep only the date part
             return item.timestamp.replace('T', ' ').split('.')[0];
           });
-        console.log(concentrations);
-        console.log(timestamps)
         setConcentrationArray(concentrations);
         setTimestampArray(timestamps)
     }
@@ -69,7 +67,7 @@ const Concentration = () => {
             <div className = 'selected-period'> 
                 <p style = {FONT.base_16}>CONCENTRATION</p>
             </div>
-            <button onClick={() => navigate('/lightintensity')} className = 'period'> 
+            <button onClick={() => navigate('/motor')} className = 'period'> 
                 <p  style = {FONT.base_16}>MOTOR </p>
             </button>
             <button onClick={() => navigate('/pid')} className = 'period'> 

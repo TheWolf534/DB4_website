@@ -6,7 +6,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Home from './Home/homePage.js';
 import Concentration from './sensorPages/concentrationPage.js';
 import Temperature from './sensorPages/temperature.js';
-import Intensity from './sensorPages/lightIntensityPage.js';
+import Motor from './sensorPages/motorPage.js';
 import PID from  './sensorPages/PIDPage.js';
 import '../styles/transitionStyles.css'; // Import the CSS for animations
 
@@ -20,7 +20,7 @@ const AnimatedRoutes = () => {
           <Route path="/" element={<Home />} />
           <Route path="/concentration" element={<Concentration/>} />
           <Route path="/temperature" element={<Temperature/>} />
-          <Route path="/lightintensity" element={<Intensity/>} />
+          <Route path="/motor" element={<Motor/>} />
           <Route path="/pid" element ={<PID/>}/>
         </Routes>
       </CSSTransition>
