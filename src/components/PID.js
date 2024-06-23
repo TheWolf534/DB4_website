@@ -1,5 +1,5 @@
 // src/PIDPage.js
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { COLORS, FONT } from "../Constants/theme.js";
 import "../styles/sensorPage.css";
 import { useNavigate } from "react-router-dom";
@@ -11,6 +11,7 @@ const PID = () => {
     I: "",
     D: "",
   });
+  const formRef = useRef(null);
 
   useEffect(() => {
     fetchPIDdata();
@@ -66,7 +67,8 @@ const PID = () => {
       }
     } catch (error) {
       console.error("Error submitting data:", error);
-    }
+    };
+    formRef.current.reset()
   };
 
   return (
@@ -104,10 +106,11 @@ const PID = () => {
             <h1 style={FONT.base_20}>Enter new values</h1>
           </div>
 
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} ref={formRef} >
             <div class="input-container">
               <input
                 type="number"
+                step="any"
                 name="P"
                 onChange={handleChange}
                 class="focus-input"
@@ -120,6 +123,7 @@ const PID = () => {
             <div class="input-container">
               <input
                 type="number"
+                step="any"
                 name="I"
                 onChange={handleChange}
                 class="focus-input"
@@ -132,6 +136,7 @@ const PID = () => {
             <div class="input-container">
               <input
                 type="number"
+                step="any"
                 name="D"
                 onChange={handleChange}
                 className="focus-input"
