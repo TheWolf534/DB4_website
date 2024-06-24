@@ -4,9 +4,9 @@ import { COLORS, FONT } from "../../Constants/theme.js";
 import "../../styles/sensorPage.css";
 import { useNavigate } from "react-router-dom";
 import PlotError from "../../components/PlotError.js";
-import PID from "../../components/PID.js";
+import PID from "../../components/PIDtemp.js";
 
-const PIDPage = () => {
+const PIDPageTemp = () => {
   const navigate = useNavigate();
 
   return (
@@ -24,12 +24,12 @@ const PIDPage = () => {
         <button onClick={() => navigate("/motor")} className="period">
           <p style={FONT.base_16}>MOTOR</p>
         </button>
-        <div className="selected-period">
+        <button onClick={() => navigate("/pid")} className="period">
           <p style={FONT.base_16}>PID</p>
-        </div>
-        <button onClick={() => navigate("/pidTemp")} className="period">
+        </button>
+        <div className="selected-period">
           <p style={FONT.base_16}>PID_TEMP</p>
-      </button>
+        </div>
       </div>
 
       <div className="screenContainer">
@@ -49,4 +49,4 @@ const PIDPage = () => {
   );
 };
 
-export default PIDPage;
+export default PIDPageTemp;
