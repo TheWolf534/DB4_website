@@ -24,9 +24,9 @@ const PID = () => {
       );
       const data = await response.json();
       setParameters({
-        P: data.ODProportional,
-        I: data.ODIntegral,
-        D: data.ODDerivative,
+        P: data.TempProportional,
+        I: data.TempIntegral,
+        D: data.TempDerivative,
       });
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -52,9 +52,9 @@ const PID = () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            ODProportional: parameters.P,
-            ODIntegral: parameters.I,
-            ODDerivative: parameters.D,
+            TempProportional: parameters.P,
+            TempIntegral: parameters.I,
+            TempDerivative  : parameters.D,
           }),
         }
       );

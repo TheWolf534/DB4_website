@@ -4,7 +4,7 @@ import { COLORS, FONT } from "../../Constants/theme.js";
 import "../../styles/sensorPage.css";
 import { useNavigate } from "react-router-dom";
 import PlotError from "../../components/PlotError.js";
-import PID from "../../components/PID.js";
+import PID from "../../components/PIDtemp.js";
 
 const PIDPageTemp = () => {
   const navigate = useNavigate();
