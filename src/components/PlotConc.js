@@ -23,6 +23,7 @@ function PlotConc({xaxis, yaxis}) {
         title: 'Concentration vs. Time',
         plot_bgcolor: 'transparent',
         paper_bgcolor: 'transparent',
+        uirevision: 'true',
         showgrid: false,
 
           xaxis: {

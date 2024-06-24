@@ -23,6 +23,7 @@ function PlotTemp({xaxis, yaxis}) {
           title: 'WATER TEMPERATURE OVER TIME',
           plot_bgcolor: 'transparent',
           paper_bgcolor: 'transparent',
+          uirevision: 'true',
           showgrid: false,
           font_family:'Helvetica',
           font_weight:'lighter',
